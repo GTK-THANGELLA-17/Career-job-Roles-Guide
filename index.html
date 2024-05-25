@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Industry Careers</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+background: linear-gradient(to right, #868f96 0%, #596164 100%);
+        }
+
+        header {
+           background: linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%);
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0 1rem;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .job-role {
+            border: 1px solid #ddd;
+box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background-color: #fff;
+            transition: transform 0.3s ease-in-out;
+            display: block; /* Initially all job roles are displayed */
+        }
+
+        .job-role:hover {
+            transform: scale(1.05);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form label {
+            margin-top: 0.5rem;
+        }
+
+        form input, form textarea {
+            margin-top: 0.5rem;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        form button {
+            margin-top: 1rem;
+            padding: 0.5rem;
+            border: none;
+            background: #333;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        form button:hover {
+            background: #555;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        ul.list-unstyled {
+            padding-left: 0;
+        }
+
+        ul.list-unstyled li {
+            display: inline;
+            margin: 0 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-dark text-white text-center py-3">
+        <h1>Software Industry Careers</h1>
+        <nav>
+            <ul class="nav justify-content-center">
+                <li class="nav-item"><a class="nav-link text-white" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#roles">Job Roles</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#resources">Resources</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="text-center py-5">
+        <div class="container">
+            <h2>Welcome to Software Industry Careers</h2>
+            <p>Your comprehensive guide to understanding and preparing for careers in the software industry.</p>
+        </div>
+    </section>
+
+<section id="courses" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2>Your Educational Qualification</h2>
+            <button id="showSkillsBtn" class="btn btn-dark">Click This To Select The Course You Did</button>
+            <div id="skillsDropdown" style="display: none;">
+                <select id="skillsSelect" class="form-control" multiple>
+                    <!-- Skills will be dynamically added here -->
+                </select>
+                <button id="applySkillsBtn" class="btn btn-primary mt-2">Apply</button>
+            </div>
+        </div>
+    </section>
+    <section id="roles" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center">Job Roles</h2>
+            <div class="row">
+<!-- Tech Job Roles -->
+                <div class="col-md-4 mb-4">
+                    <div class="job-role p-3 border rounded">
+                        <h3>Software Developer <i class="fas fa-laptop-code"></i></h3>
+                        <p><strong>Key Responsibilities:</strong> Writing, testing, and maintaining code for applications.</p>
+                        <p><strong>Required Skills:</strong> Programming languages (e.g., Java, Python), problem-solving, teamwork.</p>
+                        <p><strong>Educational Requirements:</strong> Bachelor's degree in Computer Science or related field.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="job-role p-3 border rounded">
+                        <h3>Data Scientist <i class="fas fa-database"></i></h3>
+                        <p><strong>Key Responsibilities:</strong> Analyzing complex data sets to inform business decisions.</p>
+                        <p><strong>Required Skills:</strong> Statistics, machine learning, data visualization, programming (e.g., Python, R).</p>
+                        <p><strong>Educational Requirements:</strong> Bachelor's or Master's degree in Data Science or related field.</p>
+                    </div>
+                </div>
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Network Administrator <i class="fas fa-network-wired"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Managing and maintaining network infrastructure, troubleshooting network issues.</p>
+        <p><strong>Required Skills:</strong> Networking protocols (e.g., TCP/IP), network security, troubleshooting skills.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in information technology or related field; networking certifications preferred.</p>
+    </div>
+</div>
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Database Administrator <i class="fas fa-database"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Managing and maintaining databases, ensuring data security and integrity.</p>
+        <p><strong>Required Skills:</strong> Database management systems (e.g., MySQL, Oracle), SQL query optimization, backup and recovery procedures.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in computer science or related field; database certifications preferred.</p>
+    </div>
+</div>
+
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Cloud Solutions Architect <i class="fas fa-cloud"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Designing and implementing cloud infrastructure solutions, optimizing cloud environments for performance and cost.</p>
+        <p><strong>Required Skills:</strong> Cloud platforms (e.g., AWS, Azure, Google Cloud), infrastructure as code (e.g., Terraform, CloudFormation), security best practices.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in computer science or related field; cloud certifications (e.g., AWS Certified Solutions Architect) preferred.</p>
+    </div>
+</div>
+
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Full Stack Developer <i class="fas fa-laptop-code"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Developing both frontend and backend components of web applications.</p>
+        <p><strong>Required Skills:</strong> Proficiency in frontend technologies (e.g., HTML/CSS, JavaScript) and backend frameworks (e.g., Node.js, Django).</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in computer science or related field; strong portfolio of web development projects.</p>
+    </div>
+</div>
+<div class="col-md-4 mb-4">
+                    <div class="job-role p-3 border rounded">
+                        <h3>DevOps Engineer <i class="fas fa-cloud"></i></h3>
+                        <p><strong>Key Responsibilities:</strong> Managing and automating software deployments, maintaining infrastructure.</p>
+                        <p><strong>Required Skills:</strong> Scripting, cloud services, CI/CD tools, system administration.</p>
+                        <p><strong>Educational Requirements:</strong> Bachelor's degree in Computer Science or related field.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="job-role p-3 border rounded">
+                        <h3>UX/UI Designer <i class="fas fa-paint-brush"></i></h3>
+                        <p><strong>Key Responsibilities:</strong> Designing user interfaces and experiences.</p>
+                        <p><strong>Required Skills:</strong> Design tools (e.g., Figma, Sketch), user research, prototyping.</p>
+                        <p><strong>Educational Requirements:</strong> Bachelor's degree in Design or related field.</p>
+                    </div>
+                </div>
+<div class="col-md-4 mb-4">
+                    <div class="job-role p-3 border rounded">
+                        <h3>Cybersecurity Analyst <i class="fas fa-shield-alt"></i></h3>
+                        <p><strong>Key Responsibilities:</strong> Protecting systems from cyber threats, monitoring security breaches.</p>
+                        <p><strong>Required Skills:</strong> Network security, risk management, security tools.</p>
+                        <p><strong>Educational Requirements:</strong> Bachelor's degree in Cybersecurity or related field.</p>
+                    </div>
+                </div>
+
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Data Engineer <i class="fas fa-database"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Building and maintaining data pipelines, optimizing data storage and retrieval processes.</p>
+        <p><strong>Required Skills:</strong> ETL processes, big data technologies (e.g., Hadoop, Spark), database management systems, programming skills (e.g., Python, SQL).</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in computer science, data engineering, or related field; experience with data engineering tools.</p>
+    </div>
+</div>
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Systems Administrator <i class="fas fa-server"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Managing and maintaining IT infrastructure, ensuring system reliability and security.</p>
+        <p><strong>Required Skills:</strong> System administration (e.g., Windows, Linux), network protocols, troubleshooting.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in information technology or related field; relevant certifications (e.g., MCSA, CCNA) preferred.</p>
+    </div>
+</div>
+
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Machine Learning Engineer <i class="fas fa-robot"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Developing and deploying machine learning models for data-driven applications.</p>
+        <p><strong>Required Skills:</strong> Machine learning algorithms, programming languages (e.g., Python, R), deep learning frameworks (e.g., TensorFlow, PyTorch).</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in computer science, machine learning, or related field; experience with ML projects.</p>
+    </div>
+</div>
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Network Engineer <i class="fas fa-network-wired"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Designing, implementing, and managing computer networks.</p>
+        <p><strong>Required Skills:</strong> Network protocols, routing, switching, network security.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in computer science, information technology, or related field; Cisco certifications (e.g., CCNA, CCNP) preferred.</p>
+    </div>
+</div>
+
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Data Analyst <i class="fas fa-chart-bar"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Analyzing data to identify trends, patterns, and insights.</p>
+        <p><strong>Required Skills:</strong> Data analysis tools (e.g., SQL, Excel, Python), statistical analysis.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in statistics, mathematics, computer science, or related field; experience with data analysis preferred.</p>
+    </div>
+</div>
+
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Software Quality Assurance Engineer <i class="fas fa-bug"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Testing software applications to ensure quality and reliability.</p>
+        <p><strong>Required Skills:</strong> Test planning, test automation, bug tracking.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in computer science, engineering, or related field; experience with QA methodologies and tools.</p>
+    </div>
+</div>
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>AI Engineer <i class="fas fa-robot"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Designing and implementing artificial intelligence solutions.</p>
+        <p><strong>Required Skills:</strong> Machine learning algorithms, natural language processing, neural networks.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in computer science, artificial intelligence, or related field; experience with AI technologies.</p>
+    </div>
+</div>
+
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Blockchain Developer <i class="fab fa-bitcoin"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Developing decentralized applications and smart contracts.</p>
+        <p><strong>Required Skills:</strong> Blockchain platforms (e.g., Ethereum, Hyperledger), smart contract languages (e.g., Solidity), cryptography.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in computer science, cryptography, or related field; experience with blockchain development.</p>
+    </div>
+</div>
+
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>UX Researcher <i class="fas fa-search"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Conducting user research to inform product design decisions.</p>
+        <p><strong>Required Skills:</strong> User research methods, usability testing, empathy for users.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in psychology, human-computer interaction, or related field; experience in UX research.</p>
+    </div>
+</div>
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Game Developer <i class="fas fa-gamepad"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Designing and developing video games for various platforms.</p>
+        <p><strong>Required Skills:</strong> Game development frameworks (e.g., Unity, Unreal Engine), programming languages (e.g., C#, C++), game design principles.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in game development, computer science, or related field; experience with game development projects.</p>
+    </div>
+</div>
+
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Cloud Security Engineer <i class="fas fa-cloud-upload-alt"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Securing cloud-based infrastructure and applications.</p>
+        <p><strong>Required Skills:</strong> Cloud security best practices, identity and access management, encryption techniques.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in cybersecurity, information technology, or related field; experience with cloud security technologies.</p>
+    </div>
+</div>
+
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Mobile App Developer <i class="fas fa-mobile-alt"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Designing and developing mobile applications for iOS and Android platforms.</p>
+        <p><strong>Required Skills:</strong> Mobile app development frameworks (e.g., React Native, Flutter), programming languages (e.g., Swift, Kotlin), UI/UX design principles.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in computer science, software engineering, or related field; experience with mobile app development.</p>
+    </div>
+</div>
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Artificial Intelligence Specialist <i class="fas fa-robot"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Developing AI algorithms and systems for specific applications.</p>
+        <p><strong>Required Skills:</strong> Machine learning, deep learning, natural language processing.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in computer science, artificial intelligence, or related field; experience with AI technologies.</p>
+    </div>
+</div>
+
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>AR/VR Developer <i class="fas fa-vr-cardboard"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Designing and developing augmented reality (AR) and virtual reality (VR) experiences.</p>
+        <p><strong>Required Skills:</strong> AR/VR development frameworks (e.g., Unity, Unreal Engine), 3D modeling, user interface design.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in computer science, game development, or related field; experience with AR/VR development.</p>
+    </div>
+</div>
+
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Quantum Computing Researcher <i class="fas fa-atom"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Conducting research in quantum computing algorithms and technologies.</p>
+        <p><strong>Required Skills:</strong> Quantum mechanics, linear algebra, programming skills.</p>
+        <p><strong>Educational Requirements:</strong> Advanced degree (Master's or Ph.D.) in physics, computer science, or related field; specialization in quantum computing.</p>
+    </div>
+</div>
+
+
+<!-- Game Related Job Roles -->
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Game Designer <i class="fas fa-gamepad"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Creating game concepts, designing gameplay mechanics, and crafting levels.</p>
+        <p><strong>Required Skills:</strong> Game design principles, prototyping, storytelling.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in game design, computer science, or related field; experience with game development tools.</p>
+    </div>
+</div>
+
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Game Programmer <i class="fas fa-code"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Writing and optimizing code for game mechanics, AI, and user interfaces.</p>
+        <p><strong>Required Skills:</strong> Programming languages (e.g., C++, C#, Java), game development frameworks.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in computer science, software engineering, or related field; proficiency in programming.</p>
+    </div>
+</div>
+
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Game Artist <i class="fas fa-paint-brush"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Creating visual elements such as characters, environments, and animations for games.</p>
+        <p><strong>Required Skills:</strong> 2D and/or 3D art software (e.g., Photoshop, Maya, Blender), understanding of art fundamentals.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in art, graphic design, or related field; strong portfolio of artwork.</p>
+    </div>
+</div>
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Level Designer <i class="fas fa-map"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Designing and building game levels, puzzles, and environments.</p>
+        <p><strong>Required Skills:</strong> Level design software (e.g., Unity, Unreal Engine), understanding of player experience.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in game design, computer science, or related field; experience with level design.</p>
+    </div>
+</div>
+
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Game Producer <i class="fas fa-tasks"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Overseeing the development process, managing schedules, and coordinating team efforts.</p>
+        <p><strong>Required Skills:</strong> Project management, leadership, communication.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in game development, project management, or related field; experience in game production.</p>
+    </div>
+</div>
+
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Game Tester <i class="fas fa-gamepad"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Identifying and reporting bugs, providing feedback on gameplay and usability.</p>
+        <p><strong>Required Skills:</strong> Attention to detail, problem-solving, understanding of game mechanics.</p>
+        <p><strong>Educational Requirements:</strong> High school diploma or equivalent; experience in game testing or quality assurance.</p>
+    </div>
+</div>
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Game Engine Developer <i class="fas fa-cogs"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Developing and optimizing game engines for performance and scalability.</p>
+        <p><strong>Required Skills:</strong> Proficiency in programming languages (e.g., C++, C#), understanding of game engine architecture.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in computer science, software engineering, or related field; experience in game engine development.</p>
+    </div>
+</div>
+
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Audio Designer <i class="fas fa-volume-up"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Creating and implementing sound effects, music, and dialogue for games.</p>
+        <p><strong>Required Skills:</strong> Audio editing software (e.g., Pro Tools, Reaper), understanding of sound design principles.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in audio production, music technology, or related field; experience in audio design for games.</p>
+    </div>
+</div>
+
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Localization Specialist <i class="fas fa-globe"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Translating and adapting game content for different languages and regions.</p>
+        <p><strong>Required Skills:</strong> Fluency in multiple languages, cultural understanding, attention to detail.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in linguistics, translation, or related field; experience in localization for games.</p>
+    </div>
+</div>
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>UI/UX Designer <i class="fas fa-desktop"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Designing user interfaces and user experiences for games.</p>
+        <p><strong>Required Skills:</strong> UI/UX design principles, wireframing, prototyping.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in graphic design, interaction design, or related field; experience in UI/UX design.</p>
+    </div>
+</div>
+
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Game Writer <i class="fas fa-feather-alt"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Creating narratives, dialogue, and storylines for games.</p>
+        <p><strong>Required Skills:</strong> Creative writing, storytelling, game design.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in creative writing, English, or related field; experience in narrative design for games.</p>
+    </div>
+</div>
+
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Game Marketing Manager <i class="fas fa-bullhorn"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Developing and implementing marketing strategies to promote games.</p>
+        <p><strong>Required Skills:</strong> Marketing principles, digital marketing, analytics.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in marketing, business, or related field; experience in game marketing.</p>
+    </div>
+</div>
+
+<!-- VFX Graphics Animation Job Roles -->
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>VFX Artist <i class="fas fa-magic"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Creating visual effects for film, television, and video games.</p>
+        <p><strong>Required Skills:</strong> VFX software (e.g., After Effects, Nuke), understanding of cinematography and animation principles.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in animation, visual effects, or related field; experience in VFX production.</p>
+    </div>
+</div>
+
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>3D Animator <i class="fas fa-film"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Bringing characters and objects to life through animation.</p>
+        <p><strong>Required Skills:</strong> Animation software (e.g., Maya, 3ds Max, Blender), understanding of character movement and expression.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in animation, multimedia design, or related field; experience in 3D animation.</p>
+    </div>
+</div>
+
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Storyboard Artist <i class="fas fa-pen-nib"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Creating visual storyboards to plan out scenes and sequences.</p>
+        <p><strong>Required Skills:</strong> Storyboarding software (e.g., Storyboard Pro), storytelling, drawing skills.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in animation, film, or related field; experience in storyboarding.</p>
+    </div>
+</div>
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Character Modeler <i class="fas fa-users"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Creating 3D models of characters, creatures, and objects for use in games or animations.</p>
+        <p><strong>Required Skills:</strong> 3D modeling software (e.g., ZBrush, Mudbox), anatomy, sculpting.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in animation, digital arts, or related field; strong portfolio of character models.</p>
+    </div>
+</div>
+
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Visual Effects Supervisor <i class="fas fa-video"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Overseeing the creation of visual effects for film, television, or games, ensuring quality and consistency.</p>
+        <p><strong>Required Skills:</strong> VFX production pipeline, leadership, problem-solving.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in animation, visual effects, or related field; extensive experience in VFX production.</p>
+    </div>
+</div>
+
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Texture Artist <i class="fas fa-paint-roller"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Creating textures and materials for 3D models to enhance realism and visual appeal.</p>
+        <p><strong>Required Skills:</strong> Texture painting software (e.g., Substance Painter, Mari), understanding of materials and shaders.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in animation, digital arts, or related field; experience in texture painting.</p>
+    </div>
+</div>
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Rigging Artist <i class="fas fa-puzzle-piece"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Creating skeletal structures (rigs) for characters and objects to enable animation.</p>
+        <p><strong>Required Skills:</strong> Rigging software (e.g., Autodesk Maya, Blender), understanding of anatomy and movement.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in animation, digital arts, or related field; experience in character rigging.</p>
+    </div>
+</div>
+
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Lighting Artist <i class="fas fa-lightbulb"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Setting up lighting and shadows to enhance the mood and atmosphere of game scenes.</p>
+        <p><strong>Required Skills:</strong> Lighting software (e.g., Autodesk Maya, Unreal Engine), understanding of lighting principles.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in animation, visual effects, or related field; experience in lighting for games or films.</p>
+    </div>
+</div>
+
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Technical Animator <i class="fas fa-cogs"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Creating tools and scripts to automate animation tasks and improve workflow.</p>
+        <p><strong>Required Skills:</strong> Scripting languages (e.g., Python, Mel), understanding of animation pipelines.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in animation, computer science, or related field; experience in technical animation.</p>
+    </div>
+</div>
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Compositing Artist <i class="fas fa-layer-group"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Combining visual elements (e.g., CGI, live-action footage) to create seamless shots.</p>
+        <p><strong>Required Skills:</strong> Compositing software (e.g., Adobe After Effects, Nuke), understanding of color grading and visual effects integration.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in animation, visual effects, or related field; experience in compositing.</p>
+    </div>
+</div>
+
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Effects Artist <i class="fas fa-fire"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Creating dynamic effects such as explosions, fire, and magic for games or animations.</p>
+        <p><strong>Required Skills:</strong> Particle systems, dynamics simulation, effects animation.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in animation, visual effects, or related field; experience in effects animation.</p>
+    </div>
+</div>
+
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Previsualization Artist <i class="fas fa-eye"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Creating rough visualizations of scenes or sequences to plan shots and camera movements.</p>
+        <p><strong>Required Skills:</strong> Storyboarding, 3D layout, cinematography.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in animation, film, or related field; experience in previsualization.</p>
+    </div>
+</div>
+
+
+<!-- Non-Tech Job Roles -->
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Project Manager <i class="fas fa-tasks"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Planning, executing, and monitoring projects to ensure they are completed on time and within budget.</p>
+        <p><strong>Required Skills:</strong> Project management methodologies (e.g., Agile, Waterfall), communication skills, leadership.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in project management, business administration, or related field; PMP certification preferred.</p>
+    </div>
+</div>
+
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Marketing Manager <i class="fas fa-chart-line"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Developing and implementing marketing strategies to promote products or services.</p>
+        <p><strong>Required Skills:</strong> Marketing analytics, campaign management, digital marketing channels (e.g., social media, email).</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in marketing, business administration, or related field; MBA preferred.</p>
+    </div>
+</div>
+
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Customer Service Representative <i class="fas fa-headset"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Providing assistance to customers, resolving inquiries or complaints, maintaining customer satisfaction.</p>
+        <p><strong>Required Skills:</strong> Communication skills, problem-solving abilities, patience, empathy.</p>
+        <p><strong>Educational Requirements:</strong> High school diploma or equivalent; additional training or certifications in customer service may be beneficial.</p>
+    </div>
+</div>
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Human Resources Coordinator <i class="fas fa-user-friends"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Assisting with recruitment processes, coordinating employee training, managing HR documentation.</p>
+        <p><strong>Required Skills:</strong> Organization skills, attention to detail, ability to maintain confidentiality, familiarity with HR software.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in human resources, business administration, or related field; HR certification a plus.</p>
+    </div>
+</div>
+
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Event Planner <i class="fas fa-calendar-alt"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Planning and coordinating events, managing budgets and timelines, liaising with vendors and clients.</p>
+        <p><strong>Required Skills:</strong> Organization skills, attention to detail, negotiation skills, creativity.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in event planning, hospitality management, or related field; event planning experience preferred.</p>
+    </div>
+</div>
+
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Legal Assistant <i class="fas fa-balance-scale"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Assisting lawyers with legal research, drafting documents, and managing case files.</p>
+        <p><strong>Required Skills:</strong> Knowledge of legal terminology and procedures, attention to detail, organizational skills.</p>
+        <p><strong>Educational Requirements:</strong> Associate degree in paralegal studies or related field; experience in a legal setting preferred.</p>
+    </div>
+</div>
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Content Writer <i class="fas fa-pencil-alt"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Creating engaging content for websites, blogs, and marketing materials.</p>
+        <p><strong>Required Skills:</strong> Excellent writing skills, SEO knowledge, research skills.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in English, journalism, or related field.</p>
+    </div>
+</div>
+
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Financial Analyst <i class="fas fa-chart-line"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Analyzing financial data, preparing reports and forecasts.</p>
+        <p><strong>Required Skills:</strong> Financial analysis, proficiency in Excel, understanding of accounting principles.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in finance, accounting, or related field; financial certifications preferred.</p>
+    </div>
+</div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="job-role p-3 border rounded">
+                        <h3>Product Manager <i class="fas fa-tasks"></i></h3>
+                        <p><strong>Key Responsibilities:</strong> Defining product vision, gathering requirements, and managing product lifecycle.</p>
+                        <p><strong>Required Skills:</strong> Project management, communication, market research.</p>
+                        <p><strong>Educational Requirements:</strong> Bachelor's degree in Business or related field.</p>
+                    </div>
+                </div>
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Financial Advisor <i class="fas fa-dollar-sign"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Providing financial advice to clients, managing investment portfolios, retirement planning.</p>
+        <p><strong>Required Skills:</strong> Financial analysis, knowledge of investment products, communication skills.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in finance, economics, or related field; financial certifications (e.g., CFP, CFA) preferred.</p>
+    </div>
+</div>
+
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Medical Assistant <i class="fas fa-user-md"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Assisting healthcare professionals with patient care, performing administrative tasks.</p>
+        <p><strong>Required Skills:</strong> Medical terminology, patient care skills, organizational skills.</p>
+        <p><strong>Educational Requirements:</strong> High school diploma or equivalent; medical assistant certification or training program.</p>
+    </div>
+</div>
+
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Translator <i class="fas fa-language"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Translating written or spoken material from one language to another.</p>
+        <p><strong>Required Skills:</strong> Proficiency in multiple languages, cultural understanding, attention to detail.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in linguistics, translation, or related field; fluency in source and target languages.</p>
+    </div>
+</div>
+
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Photographer <i class="fas fa-camera"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Capturing and editing photographs for various purposes (e.g., events, portraits, products).</p>
+        <p><strong>Required Skills:</strong> Photography techniques, photo editing software (e.g., Adobe Photoshop, Lightroom).</p>
+        <p><strong>Educational Requirements:</strong> Formal education in photography or related field; strong portfolio of previous work.</p>
+    </div>
+</div>
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Administrative Assistant <i class="fas fa-file-alt"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Providing administrative support to ensure efficient operation of the office.</p>
+        <p><strong>Required Skills:</strong> Organization skills, communication skills, proficiency in office software.</p>
+        <p><strong>Educational Requirements:</strong> High school diploma or equivalent; additional training in office administration a plus.</p>
+    </div>
+</div>
+
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Customer Success Manager <i class="fas fa-handshake"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Building and maintaining relationships with customers to ensure their success and satisfaction.</p>
+        <p><strong>Required Skills:</strong> Customer relationship management, problem-solving skills, communication skills.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in business, marketing, or related field; experience in customer success or account management preferred.</p>
+    </div>
+</div>
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Executive Assistant <i class="fas fa-user-tie"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Providing administrative support to high-level executives.</p>
+        <p><strong>Required Skills:</strong> Organization skills, discretion, ability to handle confidential information.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in business administration or related field; experience as an executive assistant.</p>
+    </div>
+</div>
+
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Project Coordinator <i class="fas fa-tasks"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Assisting project managers with planning, scheduling, and coordination.</p>
+        <p><strong>Required Skills:</strong> Organization skills, attention to detail, communication skills.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in business, project management, or related field; experience in project coordination.</p>
+    </div>
+</div>
+
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Technical Writer <i class="fas fa-file"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Creating documentation for technical products and processes.</p>
+        <p><strong>Required Skills:</strong> Writing skills, ability to communicate technical information clearly.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in English, technical writing, or related field; experience in technical writing.</p>
+    </div>
+</div>
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Graphic Designer <i class="fas fa-palette"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Creating visual concepts and designs for various purposes (e.g., branding, marketing materials).</p>
+        <p><strong>Required Skills:</strong> Graphic design software (e.g., Adobe Photoshop, Illustrator), creativity, attention to detail.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in graphic design, visual arts, or related field; portfolio of previous design work.</p>
+    </div>
+</div>
+
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Accountant <i class="fas fa-calculator"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Managing financial records, preparing and analyzing financial statements.</p>
+        <p><strong>Required Skills:</strong> Accounting software (e.g., QuickBooks, SAP), attention to detail, analytical skills.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in accounting, finance, or related field; CPA certification preferred.</p>
+    </div>
+</div>
+
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Public Relations Specialist <i class="fas fa-users"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Managing public relations campaigns, writing press releases, media relations.</p>
+        <p><strong>Required Skills:</strong> Communication skills, media relations, crisis management.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in public relations, communications, or related field; experience in public relations.</p>
+    </div>
+</div>
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Content Writer <i class="fas fa-pencil-alt"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Creating written content for various purposes (e.g., articles, blog posts, marketing materials).</p>
+        <p><strong>Required Skills:</strong> Writing skills, research abilities, SEO knowledge.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in English, journalism, communications, or related field; writing experience or portfolio.</p>
+    </div>
+</div>
+
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Event Coordinator <i class="fas fa-calendar-alt"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Planning and organizing events, managing logistics and vendors.</p>
+        <p><strong>Required Skills:</strong> Organization skills, attention to detail, communication skills.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in hospitality management, event planning, or related field; event planning experience.</p>
+    </div>
+</div>
+
+<div class="col-md-4 mb-4">
+    <div class="job-role p-3 border rounded">
+        <h3>Financial Analyst <i class="fas fa-chart-line"></i></h3>
+        <p><strong>Key Responsibilities:</strong> Analyzing financial data, preparing reports, and providing recommendations.</p>
+        <p><strong>Required Skills:</strong> Financial analysis, accounting principles, data analysis tools.</p>
+        <p><strong>Educational Requirements:</strong> Bachelor's degree in finance, accounting, economics, or related field; financial certifications (e.g., CFA, CPA) a plus.</p>
+    </div>
+</div>
+
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="resources" class="py-5">
+    <div class="container">
+        <h2 class="text-center">Resources To Learn Various Skills</h2>
+        <h3 class="text-center">IT Courses Platforms:</h3>
+        <h4 class="text-center">Paid Platforms:</h4>
+        <ul class="list-unstyled text-center">
+            <li><a href="https://www.coursera.org" style="color: black;">Coursera</a></li>
+            <li><a href="https://www.edx.org" style="color: black;">edX</a></li>
+            <li><a href="https://www.udacity.com" style="color: black;">Udacity</a></li>
+            <li><a href="https://www.udemy.com" style="color: black;">Udemy</a></li>
+            <li><a href="https://www.learning.linkedin.com" style="color: black;">LinkedIn Learning</a></li>
+            <li><a href="https://www.pluralsight.com" style="color: black;">Pluralsight</a></li>
+            <li><a href="https://www.codecademy.com" style="color: black;">Codecademy</a></li>
+        </ul>
+        <h4 class="text-center">Free Platforms:</h4>
+        <ul class="list-unstyled text-center">
+            <li><a href="https://www.khanacademy.org" style="color: black;">Khan Academy</a></li>
+            <li><a href="https://www.freecodecamp.org" style="color: black;">freeCodeCamp</a></li>
+            <li><a href="https://www.sololearn.com" style="color: black;">SoloLearn</a></li>
+<li><a href="https://www.w3schools.com" style="color: black;">W3Schools</a> - <a href="https://www.w3schools.com" style="color: black;">Website</a></li>
+            <li><a href="https://www.geeksforgeeks.org" style="color: black;">GeeksforGeeks</a> - <a href="https://www.geeksforgeeks.org" style="color: black;">Website</a></li>
+            <li><a href="https://www.tutorialspoint.com" style="color: black;">Tutorials Point</a> - <a href="https://www.tutorialspoint.com" style="color: black;">Website</a></li>
+        </ul>
+        <h3 class="text-center">Gaming Courses Platforms:</h3>
+        <h4 class="text-center">Paid Platforms:</h4>
+        <ul class="list-unstyled text-center">
+            <li><a href="https://www.udemy.com/courses/gaming/" style="color: black;">Udemy (Gaming)</a></li>
+            <li><a href="https://www.pluralsight.com/paths/game-development" style="color: black;">Pluralsight (Game Development)</a></li>
+            <li><a href="https://www.coursera.org/browse/computer-science/game-development" style="color: black;">Coursera (Game Development)</a></li>
+        </ul>
+        <h4 class="text-center">Free Platforms:</h4>
+        <ul class="list-unstyled text-center">
+            <li><a href="https://www.coursera.org" style="color: black;">Coursera (Some Free Courses)</a></li>
+            <li><a href="https://www.edx.org" style="color: black;">edX (Some Free Courses)</a></li>
+            <li><a href="https://www.udemy.com" style="color: black;">Udemy (Some Free Courses)</a></li>
+        </ul>
+        <h3 class="text-center">VFX Animation Courses Platforms:</h3>
+        <h4 class="text-center">Paid Platforms:</h4>
+        <ul class="list-unstyled text-center">
+            <li><a href="https://www.udemy.com/courses/animation-and-3d/" style="color: black;">Udemy (Animation & 3D)</a></li>
+            <li><a href="https://www.pluralsight.com/paths/3d-animation" style="color: black;">Pluralsight (3D Animation)</a></li>
+            <li><a href="https://www.coursera.org/browse/computer-science/animation-and-3d" style="color: black;">Coursera (Animation & 3D)</a></li>
+        </ul>
+        <h4 class="text-center">Free Platforms:</h4>
+        <ul class="list-unstyled text-center">
+            <li><a href="https://www.khanacademy.org" style="color: black;">Khan Academy</a></li>
+            <li><a href="https://www.blender.org" style="color: black;">Blender</a></li>
+            <li><a href="https://www.animationmentor.com" style="color: black;">Animation Mentor (Some Free Resources)</a></li>
+        </ul>
+        <h3 class="text-center">Non-IT Courses Platforms:</h3>
+        <h4 class="text-center">Paid Platforms:</h4>
+        <ul class="list-unstyled text-center">
+            <li><a href="https://www.masterclass.com/categories/writing" style="color: black;">MasterClass (Writing)</a></li>
+            <li><a href="https://www.skillshare.com" style="color: black;">Skillshare</a></li>
+            <li><a href="https://www.masterclass.com/categories/music" style="color: black;">MasterClass (Music)</a></li>
+        </ul>
+        <h4 class="text-center">Free Platforms:</h4>
+        <ul class="list-unstyled text-center">
+            <li><a href="https://www.khanacademy.org" style="color: black;">Khan Academy</a></li>
+            <li><a href="https://www.coursera.org" style="color: black;">Coursera (Some Free Courses)</a></li>
+            <li><a href="https://www.edx.org" style="color: black;">edX (Some Free Courses)</a></li>
+        </ul>
+<h3 class="text-center">YouTube Learn Channels For Software Courses:</h3>
+        <ul class="list-unstyled text-center">
+    <li><a href="https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ" style="color: black;">freeCodeCamp.org</a></li>
+    <li><a href="https://www.youtube.com/user/TechGuyWeb" style="color: black;">Traversy Media</a></li>
+    <li><a href="https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg" style="color: black;">The Net Ninja</a></li>
+    <li><a href="https://www.youtube.com/channel/UCSJbGtTlrDami-tDGPUV9-w" style="color: black;">Academind</a></li>
+    <li><a href="https://www.youtube.com/user/programmingwithmosh" style="color: black;">Programming with Mosh</a></li>
+    <li><a href="https://www.youtube.com/user/learncodeacademy" style="color: black;">Codecademy</a></li>
+    <li><a href="https://www.youtube.com/channel/UCVTlvUkGslCV_h-nSAId8Sw" style="color: black;">LearnCode.academy</a></li>
+    <li><a href="https://www.youtube.com/user/sentdex" style="color: black;">Sentdex</a></li>
+    <li><a href="https://www.youtube.com/user/derekbanas" style="color: black;">Derek Banas</a></li>
+    <li><a href="https://www.youtube.com/user/TechGuyWeb" style="color: black;">Tech Guy Web</a></li>
+
+        </ul>
+<h3 class="text-center">YouTube Learn Channels For Gaming And Vfx Animation Courses:</h3>
+        <ul class="list-unstyled text-center">
+<li><a href="https://www.youtube.com/user/Brackeys" style="color: black;">Brackeys</a></li>
+    <li><a href="https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ" style="color: black;">freeCodeCamp.org</a></li>
+    <li><a href="https://www.youtube.com/user/TechGuyWeb" style="color: black;">Traversy Media</a></li>
+    <li><a href="https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg" style="color: black;">The Net Ninja</a></li>
+    <li><a href="https://www.youtube.com/channel/UCSJbGtTlrDami-tDGPUV9-w" style="color: black;">Academind</a></li>
+    <li><a href="https://www.youtube.com/user/programmingwithmosh" style="color: black;">Programming with Mosh</a></li>
+    <li><a href="https://www.youtube.com/user/learncodeacademy" style="color: black;">Codecademy</a></li>
+    <li><a href="https://www.youtube.com/channel/UCVTlvUkGslCV_h-nSAId8Sw" style="color: black;">LearnCode.academy</a></li>
+    <li><a href="https://www.youtube.com/user/sentdex" style="color: black;">Sentdex</a></li>
+    <li><a href="https://www.youtube.com/user/derekbanas" style="color: black;">Derek Banas</a></li>
+    <li><a href="https://www.youtube.com/user/TechGuyWeb" style="color: black;">Tech Guy Web</a></li>
+
+        </ul>
+
+    </div>
+</section>
+
+    
+
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center">For More Details Contact Us </h2>
+            <form id="contact-form" class="mx-auto" style="max-width: 600px;">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea class="form-control" id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-dark btn-block">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Software Industry Careers</p>
+<p>&copy;Designed And Developed By G.Thangella</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+
+        document.getElementById('showSkillsBtn').addEventListener('click', function() {
+    var skills = []; // Initialize an empty array to store skills
+    var jobRoles = document.querySelectorAll('.job-role');
+    jobRoles.forEach(function(role) {
+        var requiredSkillsText = role.querySelector('p:nth-of-type(3)').textContent; // Get the text content of required skills
+        var requiredSkills = requiredSkillsText.substring(requiredSkillsText.indexOf(':') + 1).trim().split(', '); // Extract required skills
+        requiredSkills.forEach(function(skill) {
+            skill = skill.trim(); // Trim any leading or trailing whitespace
+            if (!skills.includes(skill)) {
+                skills.push(skill); // Add skill to the array if it's not already included
+            }
+        });
+    });
+    var skillsSelect = document.getElementById('skillsSelect');
+    skillsSelect.innerHTML = '';
+    skills.forEach(function(skill) {
+        var option = document.createElement('option');
+        option.text = skill;
+        skillsSelect.add(option);
+    });
+    document.getElementById('skillsDropdown').style.display = 'block';
+});
+
+document.getElementById('applySkillsBtn').addEventListener('click', function() {
+    var selectedSkills = [];
+    var options = document.getElementById('skillsSelect').options;
+    for (var i = 0; i < options.length; i++) {
+        if (options[i].selected) {
+            selectedSkills.push(options[i].text);
+        }
+    }
+    var jobRoles = document.querySelectorAll('.job-role');
+    jobRoles.forEach(function(role) {
+        var requiredSkillsText = role.querySelector('p:nth-of-type(3)').textContent; // Get the text content of required skills
+        var requiredSkills = requiredSkillsText.substring(requiredSkillsText.indexOf(':') + 1).trim().split(', '); // Extract required skills
+        var isDisplayed = true; // Assume role is displayed by default
+        selectedSkills.forEach(function(skill) {
+            if (!requiredSkills.includes(skill)) {
+                isDisplayed = false; // If any selected skill is not in required skills, hide the role
+            }
+        });
+        if (isDisplayed) {
+            role.style.display = 'block';
+        } else {
+            role.style.display = 'none';
+        }
+    });
+    document.getElementById('skillsDropdown').style.display = 'none';
+});
+
+
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            window.location.href = "mailto:imgtk17@gmail.com?subject=Contact%20Us&body=" + 
+                "Name: " + document.getElementById('name').value + "%0D%0A" +
+                "Email: " + document.getElementById('email').value + "%0D%0A" +
+                "Message: " + document.getElementById('message').value;
+        });
+    </script>
+</body>
+</html>
